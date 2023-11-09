@@ -19,4 +19,10 @@ export class CounterGroupComponent {
   onRemove(index: number) {
     this.counters.splice(index, 1);
   }
+
+  onReset() {
+    for (let elem of this.counters) {
+      elem.num = 0;
+    }
+  }
 }
