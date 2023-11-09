@@ -9,6 +9,7 @@ export class CounterComponent {
   @Input() number = 0
 
   @Output() valueChangeEvent = new EventEmitter<number>()
+  @Output() removeEvent = new EventEmitter<boolean>()
 
   onIncrease(){
     this.number++
@@ -18,5 +19,9 @@ export class CounterComponent {
   onDecrease(){
     this.number--
     this.valueChangeEvent.emit(this.number)
+  }
+
+  onRemove(){
+    this.removeEvent.emit(true);
   }
 }
