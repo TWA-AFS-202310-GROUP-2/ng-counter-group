@@ -1,0 +1,46 @@
+div {
+    font-family: 'Arial', sans-serif; /* Clean, sans-serif font for text */
+    background-color: #f9f9f9; /* Light grey background for the div */
+    padding: 20px; /* Padding around the content */
+    border-radius: 8px; /* Rounded corners for the div */
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* Subtle shadow for depth */
+    max-width: 600px; /* Maximum width of the div */
+    margin: auto; /* Center the div */
+  }
+   
+  button {
+    background-color: #007bff; /* Bootstrap primary blue */
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    margin-right: 10px; /* Space between buttons */
+    border-radius: 5px; /* Rounded corners for buttons */
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease; /* Smooth transition for button background color */
+  }
+  
+  button.add {
+    align-content: left;
+  }
+
+  button.delete {
+    align-content: right;
+  }
+   
+  button:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+  }
+   
+  app-counter {
+    display: block; /* Ensure counters are stacked vertically */
+    margin-top: 15px; /* Space between each counter */
+  }
+   
+  div.sum {
+    margin-top: 20px; /* Space above the sum display */
+    font-size: 18px; /* Larger font size for sum display */
+    font-weight: bold; /* Make the sum display bold */
+    color: #333; /* Dark grey color for sum text */
+    text-align: center; /* Center the sum text */
+  }

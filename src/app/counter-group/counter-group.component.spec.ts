@@ -21,7 +21,7 @@ describe('CounterGroupComponent', () => {
     expect(component).toBeTruthy();
   });
 
-  it('should OnAdd', () => {
+  it('should return a counter when OnAdd given click button', () => {
     component.counters = []
 
     component.OnAdd()
@@ -29,7 +29,7 @@ describe('CounterGroupComponent', () => {
     expect(component.counters.length).toEqual(1);
   });
 
-  it('should OnDelete', () => {
+  it('should return null when OnDelete given nothing', () => {
     component.counters =[
       { num: 1 },
       { num: 2 },
@@ -40,7 +40,7 @@ describe('CounterGroupComponent', () => {
     expect(component.counters.length).toEqual(0);
   });
 
-  it('should OnRemove', () => {
+  it('should return updated counters When OnRemove given index i', () => {
     component.counters =[
       { num: 1 },
       { num: 2 },
