@@ -1,0 +1,13 @@
+<div class="counter-group">
+    <button (click)="addCounter()">create counter</button>
+    <app-counter 
+    *ngFor="let counter of counters" 
+    (valueChange)="counter.currentCount = $event" 
+    [currentCount]="counter.currentCount"
+    ></app-counter> 
+    <div>
+      SUM: {{ sum }}
+      <button (click)="resetCounters()">reset</button>
+    </div>
+  </div>
+  
