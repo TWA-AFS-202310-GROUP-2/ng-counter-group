@@ -17,6 +17,11 @@ export class CounterGroupComponent {
     this.counters.forEach(counter => counter.resetCounter());
   }
 
+  removeCounter(index: number) {
+    this.counters.splice(index, 1);
+  }
+
+
   get sum(){
     return this.counters.reduce((result,current) => result + current.currentCount,0);
   }

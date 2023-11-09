@@ -1,8 +1,9 @@
 <div class="counter-group">
     <button (click)="addCounter()">create counter</button>
     <app-counter 
-    *ngFor="let counter of counters" 
+    *ngFor="let counter of counters ; let i = index" 
     (valueChange)="counter.currentCount = $event" 
+    (removeCounterEvent)="removeCounter(i)"
     [currentCount]="counter.currentCount"
     ></app-counter> 
     <div>
