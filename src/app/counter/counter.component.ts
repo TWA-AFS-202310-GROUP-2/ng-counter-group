@@ -12,17 +12,11 @@ export class CounterComponent {
   public isDisabledSubtractButton = false;
   @Output() valueChange = new EventEmitter<number>();
 
-  // ngOnChanges(changes : SimpleChanges) {
-  //   if (changes['currentCount']) {
-  //     // This will get called when the input value property changes
-  //     this.currentCount = changes['currentCount'].currentValue;
-  //   }
-  // }
-    
-
-  // 5. Add a public method named incrementCounter.
-  // 6. Add a public method named decrementCounter.
-  // 7. Add a public method named resetCounter.
+  ngOnChanges(changes : SimpleChanges) {
+    if (changes['currentCount']) {
+      this.currentCount = changes['currentCount'].currentValue;
+    }
+  }
   public incrementCounter() {
     this.currentCount++;
     this.valueChange.emit(this.currentCount);
@@ -44,8 +38,6 @@ export class CounterComponent {
     this.setButtonDisabled();
   }
 
-  // 8. Add a private method named setSpanColor.
-  // 9. Add a private method named setButtonDisabled.
   private setSpanColor() {
     if (this.currentCount < 0) {
       this.spanColor = 'green';

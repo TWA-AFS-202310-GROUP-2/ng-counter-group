@@ -14,7 +14,7 @@ export class CounterGroupComponent {
   }
 
   resetCounters() {
-    this.counters = Array<CounterComponent>();
+    this.counters.forEach(counter => counter.resetCounter());
   }
 
   get sum(){
