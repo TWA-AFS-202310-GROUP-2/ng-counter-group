@@ -86,5 +86,4 @@ describe('CounterGroupComponent', () => {
     // then
     expect(sum).toEqual(0);
   });
-
 });
