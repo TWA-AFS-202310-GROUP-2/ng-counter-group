@@ -1,6 +1,7 @@
-<div>
+<div *ngIf="isShowCounter">
     <button (click)="OnIncrease()">+</button>
     <span>number : {{number}}</span>
     <button (click)="OnDecrease()">-</button>
     <button (click)="OnReset()">reset</button>
+    <button (click)="OnRemove()">✖</button>
 </div>
