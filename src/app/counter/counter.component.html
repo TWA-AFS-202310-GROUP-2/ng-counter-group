@@ -1,6 +1,9 @@
 <div>
   <button (click)="onIncrease()" [disabled]="disableIncreaseButton">+</button>
+  &nbsp;
   <span [style.background]="textBackgroundColor">Number: {{ number }}</span>
+  &nbsp;
   <button (click)="onDecrease()" [disabled]="disableDecreaseButton">-</button>
+  &nbsp;&nbsp;
   <button (click)="onReset()">Reset</button>
 </div>
