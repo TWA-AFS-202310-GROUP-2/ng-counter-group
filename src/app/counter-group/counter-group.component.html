@@ -1,8 +1,9 @@
 <p>Counter Group</p>
 <button>Create counter</button>
 <app-counter 
-    *ngFor="let counter of counters"
+    *ngFor="let counter of counters;"
     [number] = "counter.num"
+    (change) = "counter.num = $event"
 ></app-counter>
 <div>
     Sum: {{sum}}
