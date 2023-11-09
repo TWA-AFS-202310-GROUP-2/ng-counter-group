@@ -20,7 +20,13 @@
   color: #333; /* Dark grey color for the text */
   text-align: center;
 }
+.counter-button-form{
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  margin: 10px 0;
 
+}
 .counter-group button {
   background-color: #4CAF50; /* Green background */
   color: white;
@@ -51,5 +57,6 @@
 
 .sum-display button {
   background-color: #008CBA; /* Blue background */
-  /* Rest of the styles are same as the other buttons */
+  /* 右对齐 */
+  
 }

@@ -3,7 +3,10 @@
   <div class="card">
     <h1>Counter Group</h1>
     <div class="counter-group">
-      <button (click)="addCounter()">create counter</button>
+      <div class="counter-button-form">
+        <button (click)="addCounter()">create counter</button>
+        <button (click)="resetCounters()">reset</button>
+      </div>
       <div class="counters-list">
         <app-counter 
           *ngFor="let counter of counters ; let i = index" 
@@ -14,7 +17,6 @@
       </div>
       <div class="sum-display">
         SUM: {{ sum }}
-        <button (click)="resetCounters()">reset</button>
       </div>
     </div>
   </div>
