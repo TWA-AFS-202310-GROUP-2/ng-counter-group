@@ -1,4 +1,45 @@
 /* .counter {
   display: flex;
   justify-content: space-evenly;
+  border-bottom: solid 0.5px gainsboro;
+  margin: 10px 10px 10px 10px;
 } */
+.counter {
+  background-color: #ffffff; /* White background */
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* Subtle shadow for depth */
+  padding: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 10px; /* Space between counters */
+}
+
+.counter button {
+  background-color: #5cb85c; /* Bootstrap's 'success' green for increment button */
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 4px; /* Rounded corners for buttons */
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.2s;
+}
+
+.counter button:hover {
+  background-color: #4cae4c; /* Darker shade on hover */
+}
+
+.counter .btn-danger {
+  background-color: #d9534f; /* Bootstrap's 'danger' color for remove button */
+}
+
+.counter .btn-danger:hover {
+  background-color: #c9302c; /* Darker shade on hover */
+}
+
+.counter span {
+  font-size: 16px;
+  color: #333;
+  margin: 0 10px;
+}
