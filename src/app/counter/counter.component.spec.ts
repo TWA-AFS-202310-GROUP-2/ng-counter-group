@@ -37,8 +37,23 @@ describe('CounterComponent', () => {
     expect(component.number).toEqual(0);
   });
 
-  it('should be green', () => {
+  it('disableDecreaseButton should be true when number is less than 0', () => {
+    component.number = -1;
+    expect(component.disableDecreaseButton).toEqual(true);
+  });
+
+  it('disableIncreaseButton should be true when number is more than 10', () => {
+    component.number = 11;
+    expect(component.disableIncreaseButton).toEqual(true);
+  });
+
+  it('backgroundColor should be green when number is less than 0', () => {
     component.number = -1;
     expect(component.textBackgroundColor).toEqual('green');
+  });
+
+  it('backgroundColor should be green when number is more than 10', () => {
+    component.number = 11;
+    expect(component.textBackgroundColor).toEqual('red');
   });
 });
