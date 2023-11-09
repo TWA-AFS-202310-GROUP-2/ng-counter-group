@@ -36,4 +36,10 @@ describe('CounterComponent', () => {
     component.OnReset()
     expect(component.number).toEqual(0)
   });
+
+  it('should Remove', () => {
+    component.number = 2
+    component.OnRemove()
+    expect(component.number).toEqual(0)
+  });
 });

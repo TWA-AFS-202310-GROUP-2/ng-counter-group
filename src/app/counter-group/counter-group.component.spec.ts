@@ -39,4 +39,15 @@ describe('CounterGroupComponent', () => {
 
     expect(component.counters.length).toEqual(0);
   });
+
+  it('should OnRemove', () => {
+    component.counters =[
+      { num: 1 },
+      { num: 2 },
+      { num: 3 }]
+
+    component.onRemove(2)
+
+    expect(component.counters.length).toEqual(2);
+  });
 });

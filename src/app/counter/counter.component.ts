@@ -28,10 +28,10 @@ export class CounterComponent {
     }
 
   OnRemove() {
-    this.isShowCounter = false
-    this.number = 0;
-    this.change.emit(this.number)
-    this.remove.emit(this.number)
+    // this.isShowCounter = false
+    // this.number = 0;
+    // this.change.emit(this.number)
+    this.remove.emit()
     }
 
 

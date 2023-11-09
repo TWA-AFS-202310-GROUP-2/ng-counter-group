@@ -1,4 +1,53 @@
-
-.button {
-    border-radius: 8px;
-}
+/* Container for the buttons and the number span */
+div {
+    text-align: center;
+    margin: 10px 0;
+  }
+   
+  /* General button styling */
+  button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    font-size: 14px;
+    margin: 0 5px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+   
+  button:hover {
+    background-color: #0056b3;
+  }
+   
+  /* Specific ID-based styling for the add button */
+  #add-button {
+    background-color: #28a745;
+  }
+   
+  #add-button:hover {
+    background-color: #218838;
+  }
+   
+  /* Span showing the current count */
+  span {
+    padding: 5px 10px;
+    border-radius: 4px;
+    font-weight: bold;
+    color: #333;
+    margin: 0 5px;
+    display: inline-block;
+    min-width: 80px; /* Ensures the span does not resize when number changes */
+  }
+   
+  /* Additional styling if needed for 'Reset' and 'Remove' buttons to differentiate them */
+  button:nth-last-child(1), /* Reset button */
+  button:nth-last-child(2) { /* Remove button */
+    background-color: #6c757d; /* Different color for secondary actions */
+  }
+   
+  button:nth-last-child(1):hover, /* Reset button */
+  button:nth-last-child(2):hover { /* Remove button */
+    background-color: #5a6268;
+  }
