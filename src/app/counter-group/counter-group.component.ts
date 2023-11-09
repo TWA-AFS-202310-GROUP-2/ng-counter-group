@@ -11,4 +11,10 @@ counters:{num:number}[] =[
   {num:2},
   {num:3}
 ]
+
+get Sum()
+{
+  return this.counters.reduce(
+    (result,current)=>result+current.num,0);
+}
 }
