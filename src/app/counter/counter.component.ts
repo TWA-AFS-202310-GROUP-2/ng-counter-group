@@ -8,6 +8,7 @@ import { Component, EventEmitter, Input, Output } from '@angular/core';
 export class CounterComponent {
   @Input() number = 0;
   @Output() change = new EventEmitter();
+  @Output() remove = new EventEmitter();
 
   backgroundColor = '';
 
@@ -24,6 +25,10 @@ export class CounterComponent {
   onReset() {
     this.number = 0;
     this.change.emit(this.number);
+  }
+
+  onRemove() {
+    this.remove.emit();
   }
 
   get textBackgroundColor() {
