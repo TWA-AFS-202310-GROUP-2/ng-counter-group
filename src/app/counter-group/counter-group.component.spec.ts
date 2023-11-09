@@ -20,4 +20,23 @@ describe('CounterGroupComponent', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
+
+  it('should OnAdd', () => {
+    component.counters = []
+
+    component.OnAdd()
+
+    expect(component.counters.length).toEqual(1);
+  });
+
+  it('should OnDelete', () => {
+    component.counters =[
+      { num: 1 },
+      { num: 2 },
+      { num: 3 }]
+
+    component.OnDelete()
+
+    expect(component.counters.length).toEqual(0);
+  });
 });
