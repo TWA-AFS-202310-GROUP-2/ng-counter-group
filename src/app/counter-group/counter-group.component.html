@@ -1,0 +1,11 @@
+<div class="container">
+  <div class="manage">
+    <button (click)="onAdd()" class="btn btn-primary">Create</button>
+    <button (click)="onReset()" class="btn btn-primary">Reset</button>
+  </div>
+  <div class="content">
+    <app-counter *ngFor="let counter of counters;index as i" [number]="counter.num"
+      (valueChangeEvent)="counter.num=$event" (removeEvent)="onRemove(i)"></app-counter>
+  </div>
+  <div class="sum">Sum: {{sum}}</div>
+</div>
