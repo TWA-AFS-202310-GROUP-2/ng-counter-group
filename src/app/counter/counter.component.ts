@@ -8,6 +8,10 @@ import { Component, EventEmitter, Input, Output } from '@angular/core';
 export class CounterComponent {
   @Input() number = 0
   @Output() change = new EventEmitter()
+  
+  @Input() indexToBeRemoved:number = 0
+  @Output() removeFlag = new EventEmitter()
+
   OnIncrease()
   {
     this.number++
@@ -20,5 +24,14 @@ export class CounterComponent {
     this.change.emit(this.number)
   }
 
+  OnReset()
+  {
+    this.number=0
+    this.change.emit(this.number)
+  }
 
+  OnRemove()
+  {
+    this.removeFlag.emit(this.indexToBeRemoved)
+  }
 }
