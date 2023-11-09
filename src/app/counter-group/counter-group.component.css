@@ -1,0 +1,37 @@
+p {
+  color: #4a4a4a; /* Dark grey color for the paragraph text */
+  font-size: 24px; /* Larger font size for the title */
+  font-weight: 300; /* Lighter font-weight for a more elegant look */
+  text-align: center; /* Center the title text */
+  margin-bottom: 0.5em; /* Space below the title */
+}
+ 
+button {
+  background-color: #5cb85c; /* Bootstrap's 'success' green */
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px; /* Rounded corners for buttons */
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease; /* Smooth transition for background color */
+  margin: 0 5px; /* Margin on the sides of the buttons */
+  margin-left: 212px;
+}
+ 
+button:hover {
+  background-color: #4cae4c; /* Slightly darker green on hover */
+}
+ 
+div.sum {
+  font-size: 20px;
+  color: #333; /* Dark grey color for the sum display */
+  text-align: center; /* Center the sum display */
+  margin-top: 20px; /* Space above the sum display */
+  font-weight: bold; /* Bold font for emphasis */
+}
+ 
+app-counter {
+  /* Assuming app-counter has its own internal styling, otherwise, add styles here */
+  margin-bottom: 15px; /* Space below each app-counter component */
+}

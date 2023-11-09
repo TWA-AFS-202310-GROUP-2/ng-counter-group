@@ -1,0 +1,52 @@
+
+div {
+
+  text-align: center; /* Center the buttons and text */
+
+  padding: 10px 0; /* Padding above and below the content */
+
+}
+ 
+div > button {
+
+  background-color: #337ab7; /* Bootstrap's 'primary' blue */
+
+  color: white;
+
+  border: none;
+
+  padding: 5px 10px;
+
+  border-radius: 3px; /* Slightly rounded corners for a refined look */
+
+  cursor: pointer;
+
+  font-size: 14px;
+
+  margin: 0 5px; /* Margin on the sides of the buttons */
+
+  transition: background-color 0.3s ease; /* Smooth transition for background color */
+
+}
+ 
+div > button:hover {
+
+  background-color: #286090; /* Slightly darker blue on hover */
+
+}
+ 
+span {
+
+  display: inline-block;
+
+  background-color: #f0f0f0; /* Light grey background for the number display */
+
+  padding: 5px 10px;
+
+  border-radius: 3px; /* Slightly rounded corners for a refined look */
+
+  margin: 0 5px; /* Margin on the sides of the span */
+
+  font-size: 14px;
+
+}
