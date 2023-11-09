@@ -1,2 +1,4 @@
 <p>Counter Group</p>
-<app-counter *ngFor="let counter of counters"></app-counter>
+<app-counter 
+    *ngFor="let counter of counters" [Number]="counter.num"
+></app-counter>
