@@ -21,7 +21,11 @@ export class CounterGroupComponent {
   }
 
   onRemove(i: number) {
-    this.counters.splice(i, 1);
+    this.counters.splice(i, 1)
+  }
+
+  onReset() {
+    this.counters.forEach(_ => _.num = 0)
   }
 
 }

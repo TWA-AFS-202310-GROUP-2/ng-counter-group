@@ -19,15 +19,20 @@ describe('CounterComponent', () => {
     expect(component).toBeTruthy();
   });
 
-  it('should increase number when call onIncrease',()=>{
+  it('should increase number when call onIncrease', () => {
     component.number = 0
     component.onIncrease()
     expect(component.number).toEqual(1)
   });
-  it('should decrease number when call onDecrease',()=>{
+  it('should decrease number when call onDecrease', () => {
     component.number = 1
     component.onDecrease()
     expect(component.number).toEqual(0)
   });
 
+  it("should reset the number to 0 when call onReset",()=>{
+    component.number = 9
+    component.onReset()
+    expect(component.number).toEqual(0)
+  })
 });
