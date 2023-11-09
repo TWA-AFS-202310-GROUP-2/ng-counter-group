@@ -19,18 +19,54 @@ describe('CounterComponent', () => {
     expect(component).toBeTruthy();
   });
 
-    it('should increase number when call OnIncrease', () => 
+  it('should increase number when call OnIncrease', () => 
   {
+    // given
     component.number = 2
+    // when
     component.OnIncrease()
+    // then
     expect(component.number).toEqual(3)
   })
 
   it('should decrease number when call OnDecrease', () => 
   {
+    // given
     component.number = 2
+    // when
     component.OnDecrease()
+    // then
     expect(component.number).toEqual(1)
   })
+
+  it('should reset number when call OnReset', () => 
+  {
+    // given
+    component.number = 2
+    // when
+    component.OnReset()
+    // then
+    expect(component.number).toEqual(0)
+  })
   
+  it('should reset number when call OnReset', () => 
+  {
+    // given
+    component.number = 2
+    // when
+    component.OnReset()
+    // then
+    expect(component.number).toEqual(0)
+  })
+
+  it('should remove one when call OnRemove', () => 
+  {
+    // given
+    component.number = 2
+    // when
+    component.OnRemove()
+    // then
+    expect(component.number).toEqual(2)
+  })
+
 });
