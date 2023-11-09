@@ -11,17 +11,22 @@ export class CounterComponent {
   @Output() valueChangeEvent = new EventEmitter<number>()
   @Output() removeEvent = new EventEmitter<boolean>()
 
-  onIncrease(){
+  onIncrease() {
     this.number++
     this.valueChangeEvent.emit(this.number)
   }
 
-  onDecrease(){
+  onDecrease() {
     this.number--
     this.valueChangeEvent.emit(this.number)
   }
 
-  onRemove(){
+  onRemove() {
     this.removeEvent.emit(true);
+  }
+
+  onReset() {
+    this.number = 0
+    this.valueChangeEvent.emit(this.number)
   }
 }
