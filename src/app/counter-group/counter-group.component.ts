@@ -19,4 +19,9 @@ export class CounterGroupComponent {
       0
       )
   }
+
+  OnAdd()
+  {
+    this.counters.push({num: 0})
+  }
 }
