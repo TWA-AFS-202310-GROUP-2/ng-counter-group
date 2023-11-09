@@ -20,16 +20,38 @@ describe('CounterComponent', () => {
     expect(component).toBeTruthy();
   });
 
-  it('currentCount should add 1 when incrementCounter is called', () => {
-    component.incrementCounter();
-    expect(component.currentCount).toEqual(1);
+  it('should currentCount is 0 when create CounterComponent', () => {
+    // given 
+    // when
+    // then
+    expect(component.currentCount).toEqual(0);
   });
 
-  it('should increase counter when clicking add button', () => {
-    const addButton = fixture.nativeElement.querySelector('#add-button');
-    addButton.click();
-    fixture.detectChanges();
-    const value = fixture.debugElement.query(By.css('span')).nativeElement.innerText;
-    expect(value).toEqual('number: 1');
-  })
+  it('should currentCount is 1 when call incrementCounter given currentCount is 0', () => {
+    // given 
+    component.currentCount = 0;
+    // when
+    component.incrementCounter();
+    // then
+    expect(component.currentCount).toEqual(1);
+  });
+  
+  it('should currentCount is -1 when call decrementCounter given currentCount is 0', () => {
+    // given 
+    component.currentCount = 0;
+    // when
+    component.decrementCounter();
+    // then
+    expect(component.currentCount).toEqual(-1);
+  });
+
+  it('should currentCount is 0 when call resetCounter given currentCount is 1', () => {
+    // given 
+    component.currentCount = 1;
+    // when
+    component.resetCounter();
+    // then
+    expect(component.currentCount).toEqual(0);
+  });
+
 });
