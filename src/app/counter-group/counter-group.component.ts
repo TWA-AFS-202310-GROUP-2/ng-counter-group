@@ -6,15 +6,23 @@ import { Component } from '@angular/core';
   styleUrls: ['./counter-group.component.css']
 })
 export class CounterGroupComponent {
-counters:{num:number}[] =[
-  {num:1},
-  {num:2},
-  {num:3}
-]
+  counters: { num: number }[] = [
+    { num: 1 },
+    { num: 2 },
+    { num: 3 }
+  ]
 
-get Sum()
-{
-  return this.counters.reduce(
-    (result,current)=>result+current.num,0);
-}
+  get Sum() {
+    return this.counters.reduce(
+      (result, current) => result + current.num, 0);
+  }
+  onAddCounter() {
+    this.counters.push({ num: 0 });
+  }
+  onRemoveCounter(index: number) {
+    this.counters.splice(index, 1);
+  }
+  onResetAll() {
+    this.counters.forEach(_ => _.num = 0);
+  }
 }
