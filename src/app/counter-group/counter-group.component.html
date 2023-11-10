@@ -1,0 +1,24 @@
+<!-- In your component's template -->
+<div class="centered-container">
+  <div class="card">
+    <h1>Counter Group</h1>
+    <div class="counter-group">
+      <div class="counter-button-form">
+        <button (click)="addCounter()">create counter</button>
+        <button (click)="resetCounters()">reset</button>
+      </div>
+      <div class="counters-list">
+        <app-counter 
+          *ngFor="let counter of counters ; let i = index" 
+          [currentCount]="counter.currentCount"
+          (valueChange)="counter.currentCount = $event" 
+          (removeCounterEvent)="removeCounter(i)"
+          >
+        </app-counter> 
+      </div>
+      <div class="sum-display">
+        SUM: {{ sum }}
+      </div>
+    </div>
+  </div>
+</div>

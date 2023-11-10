@@ -1,0 +1,8 @@
+<div>
+    <button id="add-button" (click)="incrementCounter()" *ngIf="!isDisabledAddButton" >+</button>
+    <span [style.background]="spanColor" >number: {{ currentCount }}</span>
+    <button (click)="decrementCounter()" *ngIf="!isDisabledSubtractButton">-</button>
+
+    <button (click)="resetCounter()">Reset</button>
+    <button (click)="removeCounter()">Remove</button>
+</div>
