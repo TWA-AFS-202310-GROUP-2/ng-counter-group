@@ -13,11 +13,11 @@ export class CounterComponent {
   @Output() valueChange = new EventEmitter<number>();
   @Output() removeCounterEvent = new EventEmitter<number>();
 
-  ngOnChanges(changes : SimpleChanges) {
-    if (changes['currentCount']) {
-      this.currentCount = changes['currentCount'].currentValue;
-    }
-  }
+  // ngOnChanges(changes : SimpleChanges) {
+  //   if (changes['currentCount']) {
+  //     this.currentCount = changes['currentCount'].currentValue;
+  //   }
+  // }
   public incrementCounter() {
     this.currentCount++;
     this.valueChange.emit(this.currentCount);

@@ -55,24 +55,24 @@ describe('CounterComponent', () => {
     expect(component.currentCount).toEqual(0);
   });
 
-  it('should update currentCount when ngOnChanges is called with new value', () => {
-    // given
-    const newCount = 5;
-    const changesObj: SimpleChanges = {
-      currentCount: {
-        previousValue: component.currentCount,
-        currentValue: newCount,
-        firstChange: false,
-        isFirstChange: () => false
-      }
-    };
+  // it('should update currentCount when ngOnChanges is called with new value', () => {
+  //   // given
+  //   const newCount = 5;
+  //   const changesObj: SimpleChanges = {
+  //     currentCount: {
+  //       previousValue: component.currentCount,
+  //       currentValue: newCount,
+  //       firstChange: false,
+  //       isFirstChange: () => false
+  //     }
+  //   };
 
-    // when
-    component.ngOnChanges(changesObj);
+  //   // when
+  //   component.ngOnChanges(changesObj);
 
-    // then
-    expect(component.currentCount).toBe(newCount);
-  });
+  //   // then
+  //   expect(component.currentCount).toBe(newCount);
+  // });
 
   it('should emit removeCounterEvent with currentCount when removeCounter is called', () => {
     // given

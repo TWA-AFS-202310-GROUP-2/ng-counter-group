@@ -10,9 +10,10 @@
       <div class="counters-list">
         <app-counter 
           *ngFor="let counter of counters ; let i = index" 
+          [currentCount]="counter.currentCount"
           (valueChange)="counter.currentCount = $event" 
           (removeCounterEvent)="removeCounter(i)"
-          [currentCount]="counter.currentCount">
+          >
         </app-counter> 
       </div>
       <div class="sum-display">
